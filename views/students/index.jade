@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h1 Students Directory
+    table.table 
+      tr
+        td Name 
+        td Phone Number
+       for student in allStudents
+        tr
+          td 
+            a(href='/students/' + student._id) #{student.name}
+          td #{student.number}
+
+
+

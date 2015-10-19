@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  a(href='/users/signup') Sign Up
+  br
+  a(href='/users/signin') Sign In
+  h1 Authentication Assessment
+  if user
+    p Welcome #{user}
+    a(href='/users/signout') Sign Out
+    br
+    a(href='/students') Go to Students Page

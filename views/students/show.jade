@@ -1,0 +1,7 @@
+extends ../layout
+
+block content
+	h1 Student: #{student.name}
+	h1 Phone: #{student.number}
+
+	a(href='/students/' + student._id + '/edit') Edit

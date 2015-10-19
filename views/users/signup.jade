@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+	.col-md-3
+	.col-md-6
+		h1 Sign Up
+		if errors
+			for message in errors
+				p(style="color:red") #{message}
+		form(action='/users/signup' , method="POST")
+			div 
+				label Email
+				input.form-control(type="text" name="email")
+			div
+				label Password
+				input.form-control(type="password" name="password")
+			div
+				br
+				input.form-control(type="submit" value="Submit")
+	.col-md-3

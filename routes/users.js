@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var bcrypt = require('bcrypt');
-var db = require('monk')('localhost/assessment')
+var db = require('monk')(process.env.MONGOLAB_URI || 'localhost/assessment')
 var users = db.get('users')
 /* GET users listing. */
 router.get('/signup', function(req, res, next) {
